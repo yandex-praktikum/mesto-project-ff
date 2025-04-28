@@ -19,6 +19,22 @@
   cursor: pointer;
 }
 
+/* Серая неактивная кнопка */
+.popup__button_disabled {
+  background-color: transparent;
+  border: 1px solid #bdbdbd;
+  color: #bdbdbd;
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* Убираем hover-эффект на неактивных кнопках */
+.popup__button_disabled:hover,
+.popup__button:disabled:hover {
+  background: none;
+  cursor: default;
+}
+
 @media screen and (max-width: 568px) {
   .popup__button {
     font-size: 14px;

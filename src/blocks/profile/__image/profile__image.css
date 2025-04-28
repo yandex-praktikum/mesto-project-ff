@@ -7,6 +7,44 @@
   background-size: cover;
   background-position: center;
   margin: 0 29px 0 0;
+  position: relative;
+}
+
+.profile__avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile__avatar-container:hover .profile__image::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand для top:0; right:0; bottom:0; left:0; */
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.profile__avatar-edit-button {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 14px);
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.profile__avatar-container:hover .profile__avatar-edit-button {
+  opacity: 1;
 }
 
 @media screen and (max-width: 740px) {

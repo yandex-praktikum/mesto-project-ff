@@ -10,17 +10,13 @@ export function closePopup(popup) {
   popup.removeEventListener("click", handleOverlayClick);
 }
 
-// Обработчик закрытия по клавише Escape
 function handleEscape(evt) {
   if (evt.key === "Escape") {
     const openedPopup = document.querySelector(".popup_is-opened");
-    if (openedPopup) {
-      closePopup(openedPopup);
-    }
+    if (openedPopup) closePopup(openedPopup);
   }
 }
 
-// Обработчик закрытия при клике на оверлей
 function handleOverlayClick(evt) {
   if (evt.target === evt.currentTarget) {
     closePopup(evt.currentTarget);
